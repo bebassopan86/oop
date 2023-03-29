@@ -11,3 +11,7 @@
     $swallow->merk="Swallow";
     $swallow->warna="Merah";
     $swallow->ukuran=10;
+
+    var_dump($swallow);
+    echo "<br>";
+    print_r($swallow);
