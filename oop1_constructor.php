@@ -1,9 +1,13 @@
 <?php
     class AlasKaki{
-        public 
-            $merk = "Merk",
-            $warna = "Warna",
-            $ukuran = "Ukuran";
+        public $merk, $warna, $ukuran;
+
+        public function __construct($merk = "Merk", $warna = "Warna", $ukuran = "Ukuran")
+        {
+            $this->merk = $merk;
+            $this->warna = $warna;
+            $this->ukuran = $ukuran;
+        }
 
         public function getLabel(){
             return "$this->merk, $this->warna, $this->ukuran";
@@ -11,14 +15,5 @@
     }
 
     //Object 1
-    $swallow = new AlasKaki();
-    $swallow->merk="Swallow";
-    $swallow->warna="Merah";
-    $swallow->ukuran=10;
-
-    var_dump($swallow);
-    echo "<br>";
+    $swallow = new AlasKaki("Swallow", "Merah", 10);
     print_r($swallow);
-
-    echo "<br>";
-    echo $swallow->getLabel();
