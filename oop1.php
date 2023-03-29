@@ -4,6 +4,10 @@
             $merk = "Merk",
             $warna = "Warna",
             $ukuran = "Ukuran";
+
+        public function getLabel(){
+            return "$this->merk, $this->warna, $this->ukuran";
+        }
     }
 
     //Object 1
@@ -16,4 +20,5 @@
     echo "<br>";
     print_r($swallow);
 
-    echo "<br> tes";
+    echo "<br>";
+    echo $swallow->getLabel();
